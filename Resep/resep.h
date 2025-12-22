@@ -28,13 +28,12 @@ void lihat();       // print semua (versi list)
 void detail();      // lihat 1 item by ID
 void ubah();        // edit yang ada
 void hapusData();   // hapus by ID
+void sortNama();
 
-// ===== Sorting =====
-void sortNama();    // bubble sort A-Z by nama
-
-// ===== Traversal Tree =====
-void pre(Node* a);
-void in(Node* a);
-void post(Node* a);
+// Tambahkan nilai default pada deklarasi di header
+void pre(Node* a, int level = 0, string posisi = "ROOT");
+void in(Node* a, int level = 0, string posisi = "ROOT");
+void post(Node* a, int level = 0, string posisi = "ROOT");
 
 #endif
+
