@@ -26,9 +26,9 @@ extern Node* root;
 void initData();
 void tambah();      // masukin 1 resep
 void lihat();       // print semua (default menu)
-void detail();      // lihat 1 item by ID
+void detail();      // lihat 1 menu
 void ubah();        // edit yang ada
-void hapusData();   // hapus by ID
+void hapusData();   // hapus menu
 void sortNama();
 
 // Tambahkan nilai default pada deklarasi di header
