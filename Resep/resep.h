@@ -23,8 +23,9 @@ struct Node {
 extern Node* root;
 
 // ===== CRUD =====
+void initData();
 void tambah();      // masukin 1 resep
-void lihat();       // print semua (versi list)
+void lihat();       // print semua (default menu)
 void detail();      // lihat 1 item by ID
 void ubah();        // edit yang ada
 void hapusData();   // hapus by ID
