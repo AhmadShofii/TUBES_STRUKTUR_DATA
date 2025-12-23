@@ -5,9 +5,10 @@
 using namespace std;
 
 int main() {
+    initData();
     int p;
     do {
-        cout << "\n== MENU ==\n";
+        cout << "\n== MENU BUKU RESEP ==\n";
         cout << "1. tambah\n";
         cout << "2. lihat\n";
         cout << "3. detail\n";
@@ -28,10 +29,18 @@ int main() {
         case 4: ubah(); break;
         case 5: hapusData(); break;
         case 6: sortNama(); break;
-        case 7: if (!root) cout << "tree kosong\n"; else pre(root); break;
-        case 8: if (!root) cout << "tree kosong\n"; else in(root); break;
-        case 9: if (!root) cout << "tree kosong\n"; else post(root); break;
-        case 0: cout << "bye\n"; break;
+        case 7: 
+                cout << "\n[PRE-ORDER - Jalur Root ke Anak]\n"; 
+                pre(root, 0, "ROOT"); 
+                break;
+            case 8: 
+                cout << "\n[IN-ORDER - Jalur Urutan Abjad]\n"; 
+                in(root, 0, "ROOT"); 
+                break;
+            case 9: 
+                cout << "\n[POST-ORDER - Jalur Hapus/Bawah ke Atas]\n"; 
+                post(root, 0, "ROOT"); 
+                break;            case 0: cout << "bye\n"; break;
         default: cout << "salah input\n";
         }
     } while (p != 0);
@@ -39,3 +48,4 @@ int main() {
     return 0;
 
 }
+
